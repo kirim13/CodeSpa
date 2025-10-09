@@ -3,7 +3,6 @@ import axios from 'axios'
 import './App.css'
 
 function App() {
-  const [helloMessage, setHelloMessage] = useState('')
   const [testMessage, setTestMessage] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
@@ -11,33 +10,9 @@ function App() {
 
   // Check backend connection on mount
   useEffect(() => {
-    checkConnection()
+    fetchTest()
   }, [])
 
-  const checkConnection = async () => {
-    try {
-      const response = await axios.get('http://localhost:8080/api/hello')
-      setConnectionStatus('connected')
-      setHelloMessage(JSON.stringify(response.data, null, 2))
-    } catch (err) {
-      setConnectionStatus('disconnected')
-      console.error('Backend connection failed:', err)
-    }
-  }
-
-  const fetchHello = async () => {
-    setLoading(true)
-    setError(null)
-    try {
-      const response = await axios.get('http://localhost:8080/api/hello')
-      setHelloMessage(JSON.stringify(response.data, null, 2))
-      setConnectionStatus('connected')
-    } catch (err) {
-      setError('Failed to fetch /api/hello')
-      setConnectionStatus('disconnected')
-    }
-    setLoading(false)
-  }
 
   const fetchTest = async () => {
     setLoading(true)
