@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     // Fetch data from Spring Boot backend
-    axios.get('http://localhost:8080/api/hello')
+    axios.get('http://localhost:8080/api/test')
       .then(response => {
         setMessage(response.data.message);
         setLoading(false);
