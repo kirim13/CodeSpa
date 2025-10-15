@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.css'
+import Header from './components/Header.jsx';
+import './components/Header.css';
 
 function App() {
   const [testMessage, setTestMessage] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
   const [connectionStatus, setConnectionStatus] = useState('checking')
+  const [inputText, setInputText] = useState('');
 
-  // Check backend connection on mount
   useEffect(() => {
     fetchTest()
   }, [])
@@ -29,42 +31,47 @@ function App() {
   }
 
   return (
+
     <div className="App">
-      <h1>⚡ Vite + React + Spring Boot</h1>
-      
-      <div className="card">
-        <div style={{ marginBottom: '20px' }}>
-          <span>Backend Status: </span>
-          <span style={{
-            color: connectionStatus === 'connected' ? '#4ade80' : 
-                   connectionStatus === 'checking' ? '#fbbf24' : '#f87171',
-            fontWeight: 'bold'
-          }}>
-            {connectionStatus === 'connected' ? '✅ Connected' : 
-             connectionStatus === 'checking' ? '⏳ Checking...' : '❌ Disconnected'}
-          </span>
+      <Header />
+      <div className='main'>
+        <div className="box-button">
+          <div className='TextBox'>
+            <textarea
+              className="input-box"
+              placeholder="Paste unfactored code here..."
+              value={inputText}
+              onChange={(e) => setInputText(e.target.value)}
+              rows="11"
+            />
+          </div>
+          <button className='refactor-button'>Refactor</button>
+          <div className='file-upload'>
+            <label htmlFor="file-upload">Upload File: </label>
+        <input 
+            type="file" 
+            id="file-upload" 
+            className="file-input"
+        />
+          </div>
+        </div>
+        <div className='sidebar'>
+          <div className='left-description'>
+            <h2>How to Use</h2>
+            <p>Copy and paste your code directly into the text-box. Or, upload a file from your computer.
+              Then simply press 'Refactor'!
+            </p>
+          </div>
         </div>
         
-        <button onClick={fetchTest} disabled={loading} style={{ marginLeft: '10px' }}>
-          Fetch /api/test
-        </button>
-
-        {loading && <p>Loading...</p>}
-        {error && <p style={{ color: '#f87171' }}>{error}</p>}
-                
-        {testMessage && (
-          <div className="response">
-            <h3>/api/test response:</h3>
-            <p>{testMessage}</p>
-          </div>
-        )}
       </div>
-      
       <p className="read-the-docs">
-        Frontend (Vite): http://localhost:3000 | Backend (Spring Boot): http://localhost:8080
+          Frontend (Vite): http://localhost:3000 | Backend (Spring Boot): http://localhost:8080
       </p>
-    </div>
+      
+    </div> 
   )
+  
 }
 
 export default App

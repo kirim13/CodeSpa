@@ -1,62 +1,61 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
+}
+
+.App {
+  padding-top: 160px;
+}
+
+.main {
+  display: flex;
+  max-width: 1400px;
+  width: 90%;
+  gap: 80px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
-.card {
-  padding: 2em;
+.box-button {
+  display: flex;
+  width: 60%;
+  align-items: flex-end;
+  flex-direction: column;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.TextBox {
+  width: 100%;
+  margin-bottom: 20px;
 }
 
-button:hover {
-  border-color: #646cff;
+.input-box {
+  width: 100%;
+  background-color: rgb(216, 211, 211);
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.refactor-button {
+  font-size: 12px;
+  padding: 1em 4em;
+  background-color: rgb(90, 113, 169);
 }
 
-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+.file-upload {
+  width: 100%;
+  text-align: left;
+  font-size: 20px;
 }
 
-.response {
-  margin-top: 20px;
-  padding: 20px;
-  background-color: #1a1a1a;
-  border-radius: 8px;
+.sidebar {
+  width: 30%;
+  padding-left: 50px; 
+}
+
+.left-description {
+  width: 100%;
   text-align: left;
 }
 
-.response h3 {
-  margin-top: 0;
-  color: #646cff;
-}
-
-.response pre {
-  background-color: #0a0a0a;
-  padding: 10px;
-  border-radius: 4px;
-  overflow-x: auto;
-}
-
 .read-the-docs {
-  color: #888;
+  color: rgb(63, 63, 63);
   margin-top: 2rem;
-  font-size: 0.9em;
+  font-size: 0.5em;
+  margin-left: 500px;
 }

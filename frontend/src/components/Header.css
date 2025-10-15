@@ -1,0 +1,38 @@
+.top-bar {
+  width: 100%;
+  height: 160px; 
+  background-color: #e8e5df; 
+  color: rgb(108, 169, 207); 
+  position: fixed;
+  top: 0;
+  left: 0;
+  
+  display: flex;
+  align-items: center; 
+  justify-content: flex-start; 
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.website-logo {
+  height: 200px; 
+  margin-right: 5px;
+}
+
+.website-name {
+  font-size: 50px; 
+  text-shadow: 1px 1px #bd3131,;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
