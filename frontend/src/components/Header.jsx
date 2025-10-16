@@ -8,10 +8,10 @@ function Header() {
      
       {}
       <div className="logo-section">
-        <img src={logo} className="website-logo" alt="Website Logo" />
-        <span className="website-name">CodeSpa</span>
+        <img src={logo} className="logo" alt="Logo" />
+        <span className="name">CodeSpa</span>
       </div>
-      <span className="website-description">An AI-Powered Code Refactoring Tool</span>
+      <span className="description">An AI-Powered Code Refactoring Tool</span>
      
     </header>
   );
