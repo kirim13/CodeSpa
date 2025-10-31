@@ -31,10 +31,29 @@ function App() {
     setLoading(false)
   }
 
+  const handleInputChange = (e) => {
+    setInputText(e.target.value);
+    e.target.style.height = 'auto';
+    e.target.style.height = e.target.scrollHeight + 'px';
+  };
+
+  useEffect(() => {
+    const outputTextarea = document.querySelector('.output-box');
+    if (outputTextarea) {
+      outputTextarea.style.height = 'auto';
+      outputTextarea.style.height = outputTextarea.scrollHeight + 'px';
+    }
+  }, [outputText]);
+
   return (
 
-    <div className="App">git
+    <div className="App">
       <Header />
+      <div className='sidebar'>
+          <div className='description'>
+            
+          </div>
+        </div>
       <div className='main'>
         <div className="box-button">
           <div className='TextBox'>
@@ -66,7 +85,7 @@ function App() {
           </div>
         
         </div>
-        <div className='sidebar'>
+        {/* <div className='sidebar'>
           <div className='left-description'>
             <h2>How to Use:</h2>
             <p>
@@ -79,7 +98,7 @@ function App() {
               Click the 'Refactor' button to process your code. The refactored code will appear in the adjacent text box.
             </p>
           </div>
-        </div>
+        </div> */}
         
       </div>
       <p className="read-the-docs">

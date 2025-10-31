@@ -1,6 +1,6 @@
 .top-bar {
   width: 100%;
-  height: 160px; 
+  height: 100px; 
   background-color: #e8e5df; 
   color: rgb(108, 169, 207); 
   position: fixed;
@@ -20,7 +20,7 @@
 }
 
 .website-logo {
-  height: 200px; 
+  height: 130px; 
   margin-right: 5px;
 }
 
@@ -35,4 +35,12 @@
   color: white;
   text-decoration: none;
   margin-left: 20px;
+}
+
+.how-to{
+  text-align: right;
+  font-size: 14px;
+  padding-left: 200px;
+  padding-right: 20px;
+  margin: 0 20px;
 }
