@@ -10,6 +10,7 @@ function App() {
   const [error, setError] = useState(null)
   const [connectionStatus, setConnectionStatus] = useState('checking')
   const [inputText, setInputText] = useState('');
+  const [outputText, setOutputText] = useState('');
 
   useEffect(() => {
     fetchTest()
@@ -45,7 +46,6 @@ function App() {
               rows="11"
             />
           </div>
-          <button className='refactor-button'>Refactor</button>
           <div className='file-upload'>
             <label htmlFor="file-upload">Upload File: </label>
         <input 
@@ -54,12 +54,29 @@ function App() {
             className="file-input"
         />
           </div>
+          <button className='refactor-button'>Refactor</button>
+          <div className='TextBox'>
+          <textarea
+            className="input-box"
+            placeholder="Refactored code will appear here..."
+            value={outputText}
+            readOnly
+            rows="11"
+          />
+          </div>
+        
         </div>
         <div className='sidebar'>
           <div className='left-description'>
-            <h2>How to Use</h2>
-            <p>Copy and paste your code directly into the text-box. Or, upload a file from your computer.
-              Then simply press 'Refactor'!
+            <h2>How to Use:</h2>
+            <p>
+              Simply paste your code into the text box provided.
+            </p>
+            <p>
+              If you have larger files or multiple code blocks, you can also upload a file from your device.
+            </p>
+            <p>
+              Click the 'Refactor' button to process your code. The refactored code will appear in the adjacent text box.
             </p>
           </div>
         </div>

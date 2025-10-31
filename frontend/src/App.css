@@ -23,7 +23,7 @@
 
 .TextBox {
   width: 100%;
-  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 .input-box {
@@ -34,6 +34,7 @@
 .refactor-button {
   font-size: 12px;
   padding: 1em 4em;
+  margin-top: 20px;
   background-color: rgb(90, 113, 169);
 }
 
@@ -44,8 +45,8 @@
 }
 
 .sidebar {
-  width: 30%;
-  padding-left: 50px; 
+  width: 40%;
+  padding-left: 10px; 
 }
 
 .left-description {
